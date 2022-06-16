@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SelectionDialog">
+        <attr name="chooserDialogTheme" format="reference" />
+        <attr name="chooserDialog_titleStyle" format="reference" />
+        <attr name="chooserDialog_itemStyle" format="reference" />
+        <attr name="chooserDialog_bodyStyle" format="reference" />
+        <attr name="searchableDialog_iconStyle" format="reference" />
+    </declare-styleable>
+</resources>

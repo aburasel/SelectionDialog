@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_option">Select an option</string>
+    <string name="option_icon">Option icon</string>
+    <string name="no_options">No options!</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="search_here">Search here</string>
+</resources>

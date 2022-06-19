@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 .cancelButtonText("Cancel")// Add for SingleSelection = false only
                 .searchInCodeAlso(false)
                 .searchOnlyAtBeginning(false)
-                .singleSelection(true)
+                .singleSelection(false)
                 .cancelable(false)
                 .onMultiSelectionDoneListener(object :
                     SearchableSelectionDialog.MultiSelectionDoneListener {

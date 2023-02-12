@@ -33,7 +33,6 @@ class SelectionRvAdapter(
         }
 
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.row_chooser_item, parent, false)

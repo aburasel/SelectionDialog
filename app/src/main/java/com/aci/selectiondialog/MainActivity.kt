@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
                             .show()
                     }
                 })
+                .showIcon(false)
                 .title("Select an option")
                 .show()
         }

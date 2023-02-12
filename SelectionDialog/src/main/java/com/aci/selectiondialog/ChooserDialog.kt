@@ -22,6 +22,7 @@ class ChooserDialog : Dialog {
     var selectableItems: List<SelectionItem>? = null
     var onItemSelectedListener: OnItemSelectedListener? = null
     var dialogTitle = context.resources.getString(R.string.select_option)
+    var iconEnabled = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +43,8 @@ class ChooserDialog : Dialog {
                         dismiss()
                     }
 
-                }
+                },
+                iconEnabled
             )
         recyclerView.itemAnimator = null
         recyclerView.layoutManager = mLayoutManager
@@ -58,12 +60,15 @@ class ChooserDialog : Dialog {
         private var title: String? = null
         private var items: List<SelectionItem> = emptyList()
         private var listener: OnItemSelectedListener? = null
-
+        var showIcon = true
 
         fun title(title: String?) = apply {
             this.title = title
         }
 
+        fun showIcon(show: Boolean) = apply {
+            this.showIcon = show
+        }
 
         fun items(items: List<SelectionItem>) = apply {
             this.items = items
@@ -81,8 +86,9 @@ class ChooserDialog : Dialog {
 
         private fun build() = ChooserDialog(context).apply {
             selectableItems = items
+            iconEnabled = showIcon
             onItemSelectedListener = listener
-            dialogTitle=title ?: context.resources.getString(R.string.select_option)
+            dialogTitle = title ?: context.resources.getString(R.string.select_option)
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
 

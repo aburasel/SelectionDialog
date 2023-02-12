@@ -14,7 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 class SelectionRvAdapter(
     internal var mContext: Context,
     private var itemList: List<SelectionItem>,
-    clickListener: ItemClickListener
+    clickListener: ItemClickListener,
+    private val showIcon: Boolean = true
 ) : RecyclerView.Adapter<SelectionRvAdapter.ViewHolder>() {
     init {
         itemClickListener = clickListener
@@ -44,6 +45,11 @@ class SelectionRvAdapter(
         holder.bind(holder.mItem!!, position, itemClickListener)
 
         holder.titleTextView.text = holder.mItem!!.text
+        if (showIcon) {
+            holder.iconImageView.visibility = View.VISIBLE
+        } else {
+            holder.iconImageView.visibility = View.GONE
+        }
         if (holder.mItem!!.icon == -1) {
             holder.iconImageView.setImageResource(R.drawable.ic_baseline_radio_button_unchecked_24)
         } else {

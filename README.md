@@ -39,6 +39,7 @@ data class SelectableData(var id: String, var name: String) : SelectionItem() {
                     .show()
             }
         })
+	.showIcon(false)
         .title("Select an option")
         .show()
 ```
@@ -144,7 +145,7 @@ val searchableItems = arrayListOf<SearchableData>()
 >Add the dependency in your app level `build.gradle`
 ```
 	dependencies {
-	        implementation 'com.github.aburasel:SelectionDialog:v1.0.0'
+	        implementation 'com.github.aburasel:SelectionDialog:1.2.0'
 	}
 
 

@@ -31,6 +31,7 @@ class SearchableSelectionDialog {
         private var cancelable: Boolean = true
         private var multiSelectListener: MultiSelectionDoneListener? = null
         private var singleSelectListener: SingleSelectionDoneListener? = null
+        private var isIconified: Boolean = false
 
 
         fun title(title: String?) = apply {
@@ -65,8 +66,12 @@ class SearchableSelectionDialog {
             this.preSelectedCodeList = codes
         }
 
-        fun items(items: List<SearchableItem>) = apply {
+        fun items(items: List<SearchableItem>)  = apply {
             this.items = items
+        }
+
+        fun setSearchViewIconified(iconified: Boolean) = apply {
+            this.isIconified = iconified
         }
 
         fun <T> items(
@@ -92,9 +97,8 @@ class SearchableSelectionDialog {
             val titleTextView = convertView.findViewById<TextView>(R.id.titleTextView)
             val searchView = convertView.findViewById<SearchView>(R.id.searchView)
 
-            searchView.setIconifiedByDefault(true)
             searchView.isFocusable = true
-            searchView.isIconified = false
+            searchView.isIconified = isIconified
             searchView.requestFocusFromTouch()
             titleTextView.text = title
 

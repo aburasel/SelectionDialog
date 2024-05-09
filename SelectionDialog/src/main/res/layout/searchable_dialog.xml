@@ -19,7 +19,8 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:iconifiedByDefault="true" />
+        android:theme="@style/SearchViewStyle"
+        app:iconifiedByDefault="true"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

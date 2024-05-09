@@ -53,4 +53,11 @@
     <style name="SearchableDialog_itemIconStyle">
         <item name="android:button">@drawable/searchable_item_icon</item>
     </style>
+    <style name="SearchViewStyle" parent="ThemeOverlay.AppCompat.Light">
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/colorText</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">@color/colorHint</item>
+    </style>
+
 </resources>

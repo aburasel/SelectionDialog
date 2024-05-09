@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             searchableItems.add(SearchableData("5", "Generated with a number suffix"))
             searchableItems.add(SearchableData("6", "Generate 10 words of dummy text"))
             searchableItems.add(SearchableData("7", "Combine lorem with other Emmet "))
-            SearchableSelectionDialog.Builder(this)
+            SearchableSelectionDialog.Builder(this@MainActivity)
                 .items(searchableItems)
                 .title("Search Items")
                 .preSelectedCodes(listOf("3", "4"))// Add for SingleSelection = false only
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 .searchInCodeAlso(false)
                 .searchOnlyAtBeginning(false)
                 .singleSelection(false)
+                .setSearchViewIconified(true)
                 .cancelable(false)
                 .onMultiSelectionDoneListener(object :
                     SearchableSelectionDialog.MultiSelectionDoneListener {

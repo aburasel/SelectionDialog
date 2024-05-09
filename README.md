@@ -1,4 +1,4 @@
-# SelectionDialog
+# Searchable Selection and Chooser Dialog
 Project for Chooser dialog, Searchable single and multi selection dialog
 
 ### Chooser dialog
@@ -106,6 +106,7 @@ val searchableItems = arrayListOf<SearchableData>()
                 .searchOnlyAtBeginning(false)
                 .singleSelection(true)
                 .cancelable(false)
+                .setSearchViewIconified(false) // keep keyboard open and focused in searchview
                 .onMultiSelectionDoneListener(object :
                     SearchableSelectionDialog.MultiSelectionDoneListener {
                     override fun onCompleteSelection(selectedItems: ArrayList<SearchableItem>) {

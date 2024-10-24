@@ -1,4 +1,4 @@
-# Searchable Selection and Chooser Dialog
+# Searchable Selection Dialog and Chooser Dialog (SelectionDialog/ChooserDialog, Multi/Single Selection Dialog)
 Project for Chooser dialog, Searchable single and multi selection dialog
 
 ### Chooser dialog
